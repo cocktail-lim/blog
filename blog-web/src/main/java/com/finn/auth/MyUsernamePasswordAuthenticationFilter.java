@@ -70,7 +70,7 @@ public class MyUsernamePasswordAuthenticationFilter extends UsernamePasswordAuth
                 if (password == null) {
                     password = "";
                 }
-
+                
                 username = username.trim();
                 UsernamePasswordAuthenticationToken authRequest = new UsernamePasswordAuthenticationToken(username, password);
                 this.setDetails(request, authRequest);
