@@ -2,7 +2,7 @@ package com.finn.serviceImpl;
 
 import com.finn.entity.User;
 import com.finn.mapper.UserMapper;
-import com.finn.service.IUserService;
+import com.finn.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-01-14
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
 }

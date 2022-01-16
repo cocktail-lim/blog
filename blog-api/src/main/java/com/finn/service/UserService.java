@@ -2,6 +2,7 @@ package com.finn.service;
 
 import com.finn.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.springframework.stereotype.Service;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author finn
  * @since 2022-01-14
  */
-public interface IUserService extends IService<User> {
+@Service
+public interface UserService extends IService<User> {
 
 }
