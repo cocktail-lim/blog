@@ -1,4 +1,4 @@
-package com.finn.entity;
+package com.finn.api;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

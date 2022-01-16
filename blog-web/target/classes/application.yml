@@ -15,7 +15,7 @@ mybatis-plus:
   mapper-locations: classpath*:/mapper/*.xml
 
 server:
-  port: 8080
+  port: 8090
 
 enable:
   swagger2: true

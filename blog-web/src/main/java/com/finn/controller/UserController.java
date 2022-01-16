@@ -8,6 +8,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
@@ -27,7 +28,7 @@ import java.util.Map;
 //@RequestMapping("/user")
 public class UserController {
 
-    @GetMapping("/user")
+    @GetMapping("/login")
     public Result user(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         AbstractAuthenticationToken abstractAuthenticationToken = (AbstractAuthenticationToken)authentication;
@@ -39,4 +40,9 @@ public class UserController {
         return Result.success().codeAndMessage(ResultInfo.SUCCESS);
     }
 
+
+    @PostMapping("http://localhost:8080/api/login")
+    public Result test(){
+        return Result.success().codeAndMessage(ResultInfo.SUCCESS);
+    }
 }

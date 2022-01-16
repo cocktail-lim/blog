@@ -1,6 +1,6 @@
 package com.finn.serviceImpl;
 
-import com.finn.entity.User;
+import com.finn.api.User;
 import com.finn.mapper.UserMapper;
 import com.finn.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

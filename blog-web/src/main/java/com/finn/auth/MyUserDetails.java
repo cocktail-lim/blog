@@ -1,6 +1,6 @@
 package com.finn.auth;
 
-import com.finn.entity.User;
+import com.finn.api.User;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
