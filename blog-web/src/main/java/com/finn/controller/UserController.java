@@ -28,21 +28,21 @@ import java.util.Map;
 //@RequestMapping("/user")
 public class UserController {
 
-    @GetMapping("/login")
+    @PostMapping("/api/login")
     public Result user(){
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        AbstractAuthenticationToken abstractAuthenticationToken = (AbstractAuthenticationToken)authentication;
-        Object details = abstractAuthenticationToken.getDetails();
-        System.out.println("Details: " + details.toString());
-        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = (UsernamePasswordAuthenticationToken)authentication;
-        Object principal = usernamePasswordAuthenticationToken.getPrincipal();
-        System.out.println("Principal: " + principal);
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        AbstractAuthenticationToken abstractAuthenticationToken = (AbstractAuthenticationToken)authentication;
+//        Object details = abstractAuthenticationToken.getDetails();
+//        System.out.println("Details: " + details.toString());
+//        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = (UsernamePasswordAuthenticationToken)authentication;
+//        Object principal = usernamePasswordAuthenticationToken.getPrincipal();
+//        System.out.println("Principal: " + principal);
         return Result.success().codeAndMessage(ResultInfo.SUCCESS);
     }
 
 
-    @PostMapping("http://localhost:8080/api/login")
-    public Result test(){
-        return Result.success().codeAndMessage(ResultInfo.SUCCESS);
-    }
+//    @PostMapping("/api/login")
+//    public Result test(){
+//        return Result.success().codeAndMessage(ResultInfo.SUCCESS);
+//    }
 }

@@ -1,6 +1,6 @@
 package com.finn.config;
 
-import com.finn.auth.MyUserDetailService;
+import com.finn.auth.MyUserDetailsService;
 import com.finn.auth.MyUsernamePasswordAuthenticationFilter;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,11 +25,11 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class MyWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private MyUserDetailService myUserDetailService;
+    private MyUserDetailsService myUserDetailService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.formLogin().successForwardUrl("/login");
+        http.formLogin().loginProcessingUrl("/api/login");
         http.csrf().disable().exceptionHandling(); // @EnableWebSecurity 会使csrf保护生效
         http.addFilterAt(myUsernamePasswordAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class); // 替换spring security的filter
     }
@@ -46,4 +46,5 @@ public class MyWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(myUserDetailService);
     }
+
 }

@@ -20,7 +20,7 @@ import java.util.Set;
  * @create: 2022-01-16-11-16
  */
 @Service
-public class MyUserDetailService implements UserDetailsService {
+public class MyUserDetailsService implements UserDetailsService {
 
     @Autowired
     private UserService userService;

@@ -34,7 +34,7 @@ public class MyUsernamePasswordAuthenticationFilter extends UsernamePasswordAuth
         else System.out.println("not null");
         System.out.println(request.getContextPath());
 
-        Map<String, String> map = new HashMap<>(); //存入username和password
+        Map<String, String> map = new HashMap<>(); //存入 username 和 password
         ObjectMapper objectMapper = new ObjectMapper();
 
         System.out.println(request.getContentType());
@@ -56,7 +56,7 @@ public class MyUsernamePasswordAuthenticationFilter extends UsernamePasswordAuth
                 String password = map.get("password");
 
                 // 打印到控制台
-                System.out.println("username: " + username + "++++" + "password: " + password);
+                System.out.println("username: " + username + "       " + "password: " + password);
 //                try {
 //                    objectMapper.writeValue(System.out, "username: " + username + "++++" + "password: " + password);
 //                } catch (IOException e) {
